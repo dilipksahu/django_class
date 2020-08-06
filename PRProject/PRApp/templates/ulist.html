@@ -1,0 +1,26 @@
+<h1> All User Details</h1>
+
+<table cellpading="10" cellspacing="10" border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th colspan="2">Action</th>
+    </tr>
+    {% for i in ul%}
+    <tr>
+        <td>{{i.0}}</td>
+        <td>{{i.1}}</td>
+        <td>{{i.2}}</td>
+        <td>{{i.3}}</td>
+        <td>{{i.4}}</td>
+        <!-- <td><a href="deleteUser/{{i.0}}">Delete</a></td> -->
+        <td><a href="deleteUser?id={{i.0}}">Delete</a></td>
+        <td><a href="editUser?id={{i.0}}">Edit</a></td>
+    </tr>
+    {%endfor%}
+</table>
+
+<h3><a href="/">home</a></h3>

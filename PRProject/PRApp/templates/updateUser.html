@@ -1,0 +1,38 @@
+<h1>
+    Its Edit Profile Form</h1>
+<form action="updateData" method="POST">
+    {% csrf_token %}
+
+    <table cellpading="10" cellspacing="10" border="1">
+        <tr>
+            <td>Id</td>
+            <td><input type="text" name="id" value="{{u.0}}"></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" value="{{u.1}}"></td>
+        </tr>
+        <tr>
+            <td>Contact</td>
+            <td><input type="text" name="contact" value="{{u.2}}"></td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td><input type="text" name="salary" value="{{u.4}}"></td>
+        </tr>
+
+        <tr>
+            <td>email</td>
+            <td><input type="text" name="email" value="{{u.3}}"></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="Update"></td>
+            <td><input type="reset" value="Reset"></td>
+        </tr>
+    </table>
+</form>
+
+
+
+<h2><a href="/">Home</a></h2>

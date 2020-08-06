@@ -18,3 +18,23 @@ def myClick3(request):
 
 def myClick2(request):
     return render(request,'mypage4.html')    
+
+def insertData(request):
+    id = request.POST.get('id')
+    name = request.POST.get('name')
+    salary = request.POST.get('salary')
+    contact = request.POST.get('contact')
+    email = request.POST.get('email')
+    print("-----------------------> ",id,name,salary,contact,email)
+    return render(request,'index.html') 
+
+def addEmp(request):
+    if request.method=='POST':
+        id=request.POST.get('id')
+        name=request.POST.get('name')
+        salary=request.POST.get('salary')
+        t=(id,name,salary)
+        return HttpResponse("<h1>"+str(t)+"</h1>")
+    
+    else:
+        return render(request,'addEmp.html')
