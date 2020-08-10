@@ -29,8 +29,19 @@ def deleteUser(request):
 def editUser(request):
     id=request.GET.get('id')
     u=db.selectUserById(id)
-    print('---------------->',u)
+    #print('---------------->',u)
     return render(request,'updateUser.html',{'u':u})
+
+def updateData(request):
+    id = request.POST.get('id')
+    name = request.POST.get('name')
+    contact = request.POST.get('contact')
+    email = request.POST.get('email')
+    salary = request.POST.get('salary')
+    t=(id,name,contact,email,salary)
+    print(t)
+    db.updateUser(t)
+    return redirect('/userList')
 
 
 

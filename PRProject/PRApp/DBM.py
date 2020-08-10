@@ -44,4 +44,13 @@ def selectUserById(id):
     db.close()
     return ul[0]
 
+def updateUser(t):
+    #for i in t:
+        #print()
+    db=getConntion()
+    sql= f"update user01 set name ='{t[1]}', Contact = '{t[2]}', email = '{t[3]}', salary = '{t[4]}' where id = '{t[0]}'"
+    cr=db.cursor()
+    cr.execute(sql)
+    db.commit()
+    db.close()
 

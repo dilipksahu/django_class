@@ -10,5 +10,6 @@ urlpatterns = [
     #path('deleteUser/<int:id>',v.deleteUser),
     path('deleteUser',v.deleteUser),
     path('editUser',v.editUser),
+    path('updateUser',v.updateData),
     
 ]
