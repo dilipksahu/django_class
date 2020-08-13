@@ -1,0 +1,33 @@
+<h1>All Account Details</h1>
+
+<table cellpading="10" cellspacing="10" border="1">
+    <tr>
+        <th>Id</th>
+        <th>Salary</th>
+        <th>Month</th>
+        <th>Emp Name</th>
+        <th>Emp Contact</th>
+        <th>Emp Email</th>
+        <th>Student Name</th>
+        <th>Student College</th>
+        <th colspan="2">Action</th>
+
+
+    </tr>
+
+    {% for i in acclist%}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.salary}}</td>
+            <td>{{i.month}}</td>
+            <td>{{i.Emp_Id.name}}</td>
+            <td>{{i.Emp_Id.contact}}</td>
+            <td>{{i.Emp_Id.email}}</td>
+            <td>{{i.Student_Rank.name}}</td>
+            <td>{{i.Student_Rank.college}}</td>
+        </tr>
+
+    {%endfor%}
+
+</table>
+<h2><a href="/">Home</a></h2>

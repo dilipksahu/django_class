@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect
 from .form import MyForm,DataForm,EmpForm,StudentForm,AccountForm
 
 def home(request):
@@ -38,3 +38,23 @@ def addAccount(request):
     else:
         f=AccountForm
         return render(request,"register.html",{'form':f})
+
+from .models import Emp,Student,Account
+
+def getEmpList(request):
+    emplist=Emp.objects.all()
+    return render(request,'emplist.html',{'emplist':emplist})
+
+def getStudentList(request):
+    studentlist=Student.objects.all()
+    return render(request,'studentList.html',{'studentlist':studentlist})
+
+def getAccountList(request):
+    acclist=Account.objects.all()
+    return render(request,'accountList.html',{'acclist':acclist})
+
+def deleteEmp(request):
+    id=request.GET.get('id')
+    emp=Emp.objects.get(id=id)
+    emp.delete()
+    return redirect('/empList')

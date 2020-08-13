@@ -10,6 +10,9 @@ class Emp(models.Model):
     cname=models.CharField(max_length=30,default="")
     class Meta:
         db_table='Emp'
+
+    def __str__(s):
+        return s.name
     
 
 
@@ -20,6 +23,9 @@ class Student(models.Model):
     college=models.CharField(max_length=30,default="")
     class Meta:
         db_table='student'
+
+    def __str__(s):
+        return s.name
 
 
 

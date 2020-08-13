@@ -10,5 +10,9 @@ urlpatterns = [
     path('addEmp',v.addEmp),
     path('addStudent',v.addStudent),
     path('addAccount',v.addAccount),
+    path('empList',v.getEmpList),
+    path('studentList',v.getStudentList),
+    path('accountList',v.getAccountList),
+    path('deleteEmp',v.deleteEmp),
     
 ]
