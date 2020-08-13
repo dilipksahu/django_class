@@ -1,0 +1,817 @@
+#  check Question no. 45
+
+1) What will be the output of the following code :
+	print(type(int))
+a)type int
+b)type ‘type’
+c)Error
+d)0
+Ans: b)type ‘type’
+
+2)What is the output of the following code :
+L = ['a','b','c','d']
+print "".join(L)
+
+(A) Error
+(B) None
+(C) abcd
+(D) [‘a’,’b’,’c’,’d’]
+Ans: (C) abcd
+
+3)What is the output of the following segment :
+	chr(ord('A'))
+(A)A
+(B) B
+(C) a
+(D) Error
+Ans: (A)A
+
+4)What is the output of the following program :
+y = 8
+z = lambda x : x * y 
+print z(6) 
+
+(A) 48
+(B) 14
+(C) 64
+(D) None of the above
+Ans: (A) 48
+
+5) Suppose list1 is [3, 4, 5, 20, 5, 25, 1, 3], what is list1 after list1.pop(1)?
+
+(A) [3, 4, 5, 20, 5, 25, 1, 3]
+(B) [1, 3, 3, 4, 5, 5, 20, 25]
+(C) [3, 5, 20, 5, 25, 1, 3]
+(D) [1, 3, 4, 5, 20, 5, 25]
+Ans: (C) [3, 5, 20, 5, 25, 1, 3]
+
+6)Which of these is not a core data type?
+(A) Lists
+(B) Dictionary
+(C) Tuples
+(D) Class
+Ans: (D) Class
+
+
+7)What data type is the object below ?
+L = [1, 23, ‘hello’, 1]
+(A) List
+(B) Dictionary
+(C) Tuple
+(D) Array
+Ans: (A) List
+
+8)Which of the following function convert a string to a float in python?
+
+(A)int(x [,base])
+(B)long(x [,base] )
+(C)float(x)
+(D)str(x)
+Ans: (C)float(x)
+
+9)What is the output of the following program :
+
+def myfunc(a): 
+    a = a + 2
+        a = a * 2
+    return a 
+  
+print myfunc(2) 
+
+(A)8
+(B)16
+(C)Indentation Error
+(D)Runtime Error
+Ans: (C)Indentation Error
+
+10)What is the output of the following program :
+
+i = 0
+while i < 3: 
+    print i 
+    i += 1
+else: 
+    print 0
+
+(A)0 1 2 3 0
+(B)0 1 2 0
+(C)0 1 2
+(D)Error
+Ans: (B)0 1 2 0
+
+
+11)What is the output of the following program
+D = dict() 
+for x in enumerate(range(2)): 
+    D[x[0]] = x[1] 
+    D[x[1]+7] = x[0] 
+print(D) 
+
+a) KeyError
+b) {0: 1, 7: 0, 1: 1, 8: 0}
+c) {0: 0, 7: 0, 1: 1, 8: 1}
+d) {1: 1, 7: 2, 0: 1, 8: 1}
+Ans: c) {0: 0, 7: 0, 1: 1, 8: 1}
+
+12)What is the output of the following program?
+D = dict() 
+for i in range (3): 
+    for j in range(2): 
+        D[i] = j 
+print(D) 
+
+a) {0: 0, 1: 0, 2: 0}
+b) {0: 1, 1: 1, 2: 1}
+c) {0: 0, 1: 0, 2: 0, 0: 1, 1: 1, 2: 1}
+d) TypeError: Immutable object 
+Ans: b) {0: 1, 1: 1, 2: 1}
+
+13)Which of the options below could possibly be the output of the following program?
+
+D = {1 : [1, 2, 3], 2: (4, 6, 8)} 
+D[1].append(4) 
+print(D[1], end = " ") 
+L  = list(D[2]) 
+L.append(10) 
+D[2] = tuple(L) 
+print(D[2]) 
+
+a) [1, 2, 3, 4] [4, 6, 8, 10]
+b) [1, 2, 3] (4, 6, 8)
+c) ‘[1, 2, 3, 4] TypeError: tuples are immutable
+d) [1, 2, 3, 4] (4, 6, 8, 10)
+Ans: d) [1, 2, 3, 4] (4, 6, 8, 10)
+
+14) Find The Out Put OF PROGRAMS
+
+i = 1
+while True: 
+    if i%3 == 0: 
+        break
+    print(i) 
+    i + = 1
+Ans: 	1
+	2
+
+
+15) Find The Out Put OF PROGRAMS
+x = ['ab', 'cd'] 
+for i in x: 
+    i.upper() 
+print(x)
+Ans: ['ab', 'cd']
+
+
+
+17) Find The Out Put OF PROGRAMS
+for i in [1, 2, 3, 4][::-1]: 
+    print (i) 
+Ans: 4 3 2 1
+
+18) Find The Out Put OF PROGRAMS
+
+l=[1, 2, 3, 4]
+print(l[::-1])
+Ans: [4, 3, 2, 1]
+
+19) What is the output of the following program?
+
+from math import *
+a = 2.13
+b = 3.7777
+c = -3.12
+print(int(a), floor(b), ceil(c), fabs(c))
+ 
+a) 2 3 -4 3
+b) 2 3 -3 3.12
+c) 2 4 -3 3
+d) 2 3 -4 3.12
+Ans: b) 2 3 -3 3.12
+
+20) What is the output of the following program?
+
+Int i=1
+while(I==1):
+	print(i)
+Ans: invalid syntax
+
+
+21)What is answer of this expression, 22 % 3 is?
+a) 7
+b) 1
+c) 0
+d) 5
+Ans: b) 1
+
+22) Which of the following will run without errors ?
+a)round(45.8)
+b)round(45.8,58,2)
+c)round()
+d)round(45.8,1,2)
+Ans: a)round(45.8)
+
+23) What is the maximum possible length of an identifier?
+      a)31 Charchter
+      b)65 Charchter
+      c)79 Charchter
+      d)Non of the above
+Ans: c)79 Charchter
+
+24) All keywords in Python are in
+      a)Lower Case
+      a)Upper Case
+      a)Capital Case
+      a)None Case
+Ans: All the keywords except True, False and None are in lowercase 
+
+25) output of Following Programs
+	x=[‘a’,’c’]
+	for i in x:
+		x.append(i)
+	print(i)
+Ans: Error
+
+
+26)output of Following Programs
+x = 123
+for i in x: 
+    print(i)
+Ans: int object not iterable
+
+27)output of Following Programs
+	str=”ABCD”
+	print(str[1])
+	str[0]=’K’
+	print(str)
+Ans: B ,TypeError: 'str' object does not support item assignment
+
+28)Which of the options below could possibly be the output of the following program?
+	D = {1 : [1, 2, 3], 2: (4, 6, 8)} 
+	D[1].append(4) 
+	print(D[1], end = " ") 
+	L  = list(D[2]) 
+	L.append(10) 
+a) [1, 2, 3, 4] [4, 6, 8, 10]
+b) [1, 2, 3] (4, 6, 8)
+c) ‘[1, 2, 3, 4] TypeError: tuples are immutable
+d) [1, 2, 3, 4] (4, 6, 8, 10)
+Ans: [1, 2, 3, 4]
+
+29)Find Answer
+list1 = range(100, 110) #statement 1 
+print("index of element 105 is : ", list1.index(105)) #statement 2
+
+a)Error in statement 1
+b)Error in statement 2
+c) 104
+d)105
+Ans: index of element 105 is :  5
+
+30) Find Output
+	list1 = [1, 2, 3, 4, 5] 
+	list2 = list1 
+	list2[0] = 0;   
+	print "list1= : ", list1 #statement 2 
+	Output:?
+Ans: list1= :  [0, 2, 3, 4, 5]
+
+31)What is the output of the following program?
+	data = [2, 3, 9] 
+	temp = [[x for x in[data]] for x in range(3)] 
+	print (temp)
+
+a) [[[2, 3, 9]], [[2, 3, 9]], [[2, 3, 9]]]
+b) [[2, 3, 9], [2, 3, 9], [2, 3, 9]]
+c) [[[2, 3, 9]], [[2, 3, 9]]]
+d) None of these
+Ans: a) [[[2, 3, 9]], [[2, 3, 9]], [[2, 3, 9]]]
+
+32)What is the output of the following program?
+	data = [x for x in range(5)] 
+	temp = [x for x in range(7) if x in data and x%2==0] 
+	print(temp)
+
+a) [0, 2, 4, 6]
+b) [0, 2, 4]
+c) [0, 1, 2, 3, 4, 5]
+d) Runtime error
+Ans: b) [0, 2, 4]
+
+33) What is the output of the following program?
+	temp = ['Geeks', 'for', 'Geeks'] 
+	arr = [i[0].upper() for i in temp] 
+	print(arr) 
+
+a) [‘G’, ‘F’, ‘G’]
+b) [‘GEEKS’]
+c) [‘GEEKS’, ‘FOR’, ‘GEEKS’]
+d) Compilation error
+Ans: a) [‘G’, ‘F’, ‘G’]
+
+34) What is the output of the following program?
+	temp = 'Geeks 22536 for 445 Geeks'
+	data = [x for x in (int(x)
+                    for x in temp
+                        if x.isdigit())
+                                if x%2 == 0]
+	print(data)
+
+a) [2, 2, 6, 4, 4]
+b) Compilation error
+c) Runtime error
+d) [‘2’, ‘2’, ‘5’, ‘3’, ‘6’, ‘4’, ‘4’, ‘5’]
+Ans: a) [2, 2, 6, 4, 4]
+
+35)What is the output of the following program?
+	List = [True, 50, 10] 
+	List.insert(2, 5)     
+	print(List, "Sum is: ", sum(List)) 
+
+a) [True, 50, 10, 5] Sum is: 66
+b) [True, 50, 5, 10] Sum is: 65
+c) TypeError: unsupported operand type(s) for +: ‘int’ and ‘str’
+d) [True, 50, 5, 10] Sum is: 66
+Ans: d) [True, 50, 5, 10] Sum is: 66
+
+36)What is the output of the following program?
+	List = [False, 50, 10] 
+	List.insert(2, 5)     
+	print(List, "Sum is: ", sum(List)) 
+a) [False, 50, 10, 5] Sum is: 66
+b) [False, 50, 5, 10] Sum is: 65
+c) TypeError: unsupported operand type(s) for +: ‘int’ and ‘str’
+d) [False, 50, 5, 10] Sum is: 66
+Ans: b) [False, 50, 5, 10] Sum is: 65
+
+37)What is the output of the following program?
+	T = (1, 2, 3, 4, 5, 6, 7, 8) 
+	print(T[T.index(5)], end = " ") 
+	print(T[T[T[6]-3]-6]) 
+a) 4 0
+b) 5 8
+c) 5 IndexError
+d) 4 1
+Ans: b) 5 8
+
+38) What is the output of the following program?
+	L = [1, 3, 5, 7, 9] 
+	print(L.pop(-3), end = '  ') 
+	print(L.remove(L[0]), end = '  ') 
+	print(L) 
+a) 5 None [3, 7, 9]
+b) 5 1 [3, 7, 9]
+c) 5 1 [3, 7, 9]
+d) 5 None [1, 3, 7, 9]
+Ans: a) 5 None [3, 7, 9]
+
+38) What is the output of the following program?
+	def REVERSE(L): 
+    		L.reverse() 
+    		return(L) 
+	def YKNJS(L): 
+   		List = list() 
+    		List.extend(REVERSE(L)) 
+    		print(List) 
+  
+	L = [1, 3.1, 5.31, 7.531] 
+	YKNJS(L)
+a) [1, 3.1, 5.31, 7.531]
+b) [7.531, 5.31, 3.1, 1]
+c) IndexError
+d) AttributeError: ‘NoneType’ object has no attribute ‘REVERSE’
+Ans: b) [7.531, 5.31, 3.1, 1]
+
+39)
+	L1 = [1, 1.33, 'GFG', 0, 'NO', None, 'G', True] 
+	val1, val2 = 0, '' 
+	for x in L1: 
+    		if(type(x) == int or type(x) == float): 
+        		val1 += x 
+    		elif(type(x) == str): 
+        		val2 += x 
+    		else: 
+        		break
+	print(val1, val2) 	
+
+a) 2 GFGNO
+b) 2.33 GFGNOG
+c) 2.33 GFGNONoneGTrue
+d) 2.33 GFGNO
+Ans: d) 2.33 GFGNO
+
+40)What is the output of the following program?
+	L1 = [1, 2, 3, 4] 
+	L2 = L1 
+	L3 = L1.copy() 
+	L4 = list(L1) 
+	L1[0] = [5] 
+	print(L1, L2, L3, L4)
+
+a) [5, 2, 3, 4] [5, 2, 3, 4] [1, 2, 3, 4] [1, 2, 3, 4]
+b) [[5], 2, 3, 4] [[5], 2, 3, 4] [[5], 2, 3, 4] [1, 2, 3, 4]
+c) [5, 2, 3, 4] [5, 2, 3, 4] [5, 2, 3, 4] [1, 2, 3, 4]
+d) [[5], 2, 3, 4] [[5], 2, 3, 4] [1, 2, 3, 4] [1, 2, 3, 4]
+Ans: d) [[5], 2, 3, 4] [[5], 2, 3, 4] [1, 2, 3, 4] [1, 2, 3, 4]
+
+41)What is the output of the following program?
+	import sys 
+	L1 = tuple() 
+	print(sys.getsizeof(L1), end = " ") 
+	L1 = (1, 2) 
+	print(sys.getsizeof(L1), end = " ") 
+	L1 = (1, 3, (4, 5)) 
+	print(sys.getsizeof(L1), end = " ") 
+	L1 = (1, 2, 3, 4, 5, [3, 4], 'p', '8', 9.777, (1, 3)) 
+	print(sys.getsizeof(L1)) 
+
+a) 0 2 3 10
+b) 32 34 35 42
+c) 48 64 72 128
+d) 48 144 192 480
+Ans: 40 56 64 120
+
+42)What is the output of the following program?
+	T1 = (1) 
+	T2 = (3, 4) 
+	T1 += 5
+	print(T1) 
+	print(T1 + T2) 
+
+a) TypeError
+b) (1, 5, 3, 4)
+c) 1 TypeError
+d) 6 TypeError
+Ans: d) 6 TypeError
+
+43) How many except statements can a try-except block have?
+a) zero
+b) one
+c) more than one
+d) more than zero
+Ans: d) more than zero i.e atleast one
+
+44) When will the else part of try-except-else be executed?
+a) always
+b) when an exception occurs
+c) when no exception occurs
+d) when an exception occurs in to except block
+Ans: c) when no exception occurs
+
+45) Is the following Python code valid?
+	try:
+	    # Do something
+	except:
+	    # Do something
+	finally:
+	    # Do something
+Ans: no, finally cannot be used with except,
+     but finally can be used with raise and else
+
+
+46)Can one block of except statements handle multiple exception?
+a) yes, like except TypeError, SyntaxError [,…]
+b) yes, like except (TypeError, SyntaxError)
+c) no
+d) none of the mentioned
+Ans: a) yes, like except TypeError, SyntaxError [,…]
+	 Each type of exception can be specified directly. There is no need to put it in a list.
+
+47)When is the finally block executed?
+a) when there is no exception
+b) when there is an exception
+c) only if some condition that has been specified is satisfied
+d) always
+Ans: d) always
+
+48)What will be the output of the following Python code?
+	def foo():
+    		try:
+       			return 1
+    		finally:
+        		return 2
+	k = foo()
+	print(k)
+a) 1
+b) 2
+c) 3
+d) error, there is more than one return statement in a single try-finally block
+Ans: b) 2
+
+49)What will be the output of the following Python code?
+
+def foo():
+    try:
+        print(1)
+    finally:
+        print(2)
+foo()
+a) 1 2
+b) 1
+c) 2
+d) none of the mentioned
+Ans: a) 1 2
+
+50) What will be the output of the following Python code?
+
+try:
+    if '1' != 1:
+        raise "someError"
+    else:
+        print("someError has not occurred")
+except "someError":
+    print ("someError has occurred")
+a) someError has occurred
+b) someError has not occurred
+c) invalid code
+d) none of the mentioned
+Ans: d) none of the mentioned
+	TypeError: catching classes that do not inherit from BaseException is not allowed
+
+
+51) What happens when ‘1’ == 1 is executed?
+a) we get a True
+b) we get a False
+c) an TypeError occurs
+d) a ValueError occurs
+Ans: b) we get a False
+
+52)What will be the output of the following Python code?
+	a = 4
+	b = 0
+	print("The value of a / b is : ")
+	assert b != 0, "Divide by 0 error"
+	print(a / b)
+Ans: AssertionError: Divide by 0 error
+
+
+53)What will be the output of the following Python code?
+	batch = [ 40, 26, 39, 30, 25, 21] 
+	for i in batch: 
+    		assert i >= 26, "Batch is Rejected"
+    		print (str(i) + " is O.K" ) 
+Ans: 40 is O.K
+	26 is O.K
+	39 is O.K
+	30 is O.K
+	AssertionError: Batch is Rejected
+
+54)What will be the output of the following Python code?
+	x=10
+	y=8
+	assert x>y, 'X too small'
+
+a) Assertion Error
+b) 10 8
+c) No output
+d) 108
+Ans: c) No output
+
+55)What will be the output of the following Python code?
+	l=[56,69,23]
+	for i in range(3):
+    		print(next(l))
+Ans: TypeError: 'list' object is not an iterator
+
+56)What will be the output of the following Python code?
+	l=[56,69,23]
+	l=iter(l)
+	for i in range(3):
+	    print(next(l))
+Ans: 56 69 23
+
+
+57)What will be the output of the following Python code?
+def f(x):
+	yield x+1
+g=f(8)
+print(next(g))
+a) 8
+b) 9
+c) 7
+d) Error
+Ans: b) 9
+
+58)What will be the output of the following Python code?
+	import os   
+	cwd = os.getcwd()  
+	print("Current working directory:", cwd) 
+Ans: Current working directory: E:\django\django_class\python_revision 
+
+
+59) What will be the output of the following Python code?
+	def f(x):
+	    yield x+1
+	    print("test")
+	    yield x+2
+	g=f(9)
+a) Error
+b) test
+c)test
+   10
+   12
+d) No output
+Ans: d) No output
+
+60)What will be the output of the following Python code?
+	def f(x):
+	    yield x+1
+	    print("test")
+	    yield x+2
+	g=f(10)
+	print(next(g))
+	print(next(g))
+
+a) No output
+b)11
+  test
+   12
+c)11
+  test
+d)11
+Ans: b)	11
+  	test
+   	12
+
+61)Which of the following is not an exception handling keyword in Python?
+a) try
+b) except
+c) accept
+d) finally
+Ans: c) accept
+
+62) What will be the output of the following Python code?
+	g = (i for i in range(5))
+	type(g)
+a) class <’loop’>
+b) class <‘iteration’>
+c) class <’range’>
+d) class <’generator’>
+Ans : d) class <’generator’>
+
+63) What will be the output of the following Python code?
+	g = (i for i in range(5))
+	print(type(g))
+	print(next(g))
+Ans: <class 'generator'>
+	0
+
+64) What will be the output of the following Python code?
+	g = (i for i in range(5))
+	print(type(g))
+	print(next(g))
+	print(next(g))
+	print(next(g))
+Ans: <class 'generator'>
+	0
+	1
+	2
+
+65) What will be the output of the following Python code?
+	a=[14,52,7]
+	b=a.copy()
+	print(b is a)
+
+a) True
+b) False
+Ans: b) False
+
+66) What will be the output of the following Python code?
+	def change(var, lst):
+    		var = 1
+    		lst[0] = 44
+	k = 3
+	a = [1, 2, 3]
+	change(k, a)
+	print(k)
+	print(a)
+a)3
+  [44, 2, 3]
+b)1
+  [1,2,3]
+c)3
+  [1,2,3]
+d)1
+  [44,2,3]
+Ans: a)	3
+  	[44, 2, 3]
+
+67)Which of the following is the use of function in python?
+a) Functions are reusable pieces of programs
+b) Functions don’t provide better modularity for your application
+c) you can’t also create your own functions
+d) All of the mentioned
+Ans: a) Functions are reusable pieces of programs
+
+68) Which keyword is used for function?
+a) Fun
+b) Define
+c) Def
+d) Function
+Ans: def
+
+69) What will be the output of the following Python code?
+	def sayHello():
+	    print('Hello World!') 
+	sayHello() 
+	sayHello()
+
+a)Hello World!
+  Hello World!
+b)'Hello World!'
+  'Hello World!'
+c)Hello
+  Hello
+d) None of the mentioned
+Ans: a)	Hello World!
+  	Hello World!
+
+70) What will be the output of the following Python code?
+	def printMax(a, b):
+    		if a > b:
+     		   	print(a, 'is maximum')
+    		elif a == b:
+        		print(a, 'is equal to', b)
+    		else:
+        		print(b, 'is maximum')
+	printMax(3, 4)
+a) 3
+b) 4
+c) 4 is maximum
+d) None of the mentioned
+Ans: c) 4 is maximum
+
+71) What will be the output of the following Python code?
+	x = 50
+	def func(x):
+    		x = 2
+   	func(x)
+	print('x is now', x)
+
+a) x is now 50
+b) x is now 2
+c) x is now 100
+d) None of the mentioned
+Ans: a) x is now 50
+
+72) What will be the output of the following Python code?
+	x = 50
+	def func(x):
+    		print('x is', x)
+    		x = 2
+   		print('Changed local x to', x)
+	func(x)
+	print('x is now', x)
+
+a) x is now 50
+   x is now 2
+   x is now 50
+b) x is now 50
+   x is now 2
+   x is now 2
+
+c) x is now 100
+d) None of the mentioned
+Ans: a) x is now 50
+   	Changed local x to 2
+   	x is now 50
+
+73)What will be the output of the following Python code?
+	x = 50
+	def func():
+	    global x
+	    print('x is', x)
+	    x = 2
+	    print('Changed global x to', x)
+	func()
+	print('Value of x is', x)
+a)x is 50
+ Changed global x to 2
+ Value of x is 50
+b)x is 50
+ Changed global x to 2
+ Value of x is 2
+c)x is 50
+ Changed global x to 50
+ Value of x is 50
+d) None of the mentioned
+Ans: b)	x is 50
+ 	Changed global x to 2
+ 	Value of x is 2
+
+74) What will be the output of the following Python code?
+	def say(message, times = 1):
+	    print(message * times)
+	say('Hello')
+	say('World', 5)
+
+a)Hello
+  WorldWorldWorldWorldWorld
+b)Hello
+  World 5
+c)Hello
+  World,World,World,World,World
+d)Hello
+  HelloHelloHelloHelloHello
+Ans: a)	Hello
+  	WorldWorldWorldWorldWorld
+
