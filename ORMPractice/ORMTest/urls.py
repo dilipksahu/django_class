@@ -7,5 +7,6 @@ urlpatterns = [
     path('', v.home),
     path('addEmp',v.addEmp),
     path('addStudent',v.addStudent),
+    path('addAccount',v.addAccount),
     
 ]

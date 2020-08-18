@@ -5,11 +5,11 @@ class Emp(models.Model):
     email = models.CharField(max_length=50)
     contact = models.IntegerField()
     age = models.IntegerField()
-    cname = models.CharField(max_length=15,default='')
-    address = models.CharField(max_length=200,default='')
+    comname = models.CharField(max_length=15,default='')
+    empaddress = models.CharField(max_length=200,default='')
     class Meta:
         db_table = "Emp"
-    def __srt_(s):
+    def __str__(s):
         return s.name
     
     
@@ -20,13 +20,13 @@ class Student(models.Model):
     college = models.CharField(max_length=20)
     class Meta:
         db_table = "Student"
-    def __srt_(s):
+    def __str__(s):
         return s.name
 
 class Account(models.Model):
     salary = models.IntegerField()
     month = models.CharField(max_length=15)
-    emp_id = models.ForeignKey(Emp,on_delete=models.CASCADE)
+    emp = models.ForeignKey(Emp,on_delete=models.CASCADE)
     std = models.ForeignKey(Student,on_delete=models.CASCADE)
     class Meta:
         db_table = "Account"
