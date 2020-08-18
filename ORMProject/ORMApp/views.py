@@ -58,3 +58,51 @@ def deleteEmp(request):
     emp=Emp.objects.get(id=id)
     emp.delete()
     return redirect('/empList')
+
+def deleteStd(request):
+    Rank = request.GET.get('Rank')
+    std=Student.objects.get(Rank=Rank)
+    std.delete()
+    return redirect('/studentList')
+
+def deleteAcc(request):
+    id = request.GET.get('id')
+    acc=Account.objects.get(id=id)
+    acc.delete()
+    return redirect('/accountList')
+
+def editEmp(request):
+    sid=request.GET.get('sid')
+    emp=Emp.objects.get(id=sid)
+    if request.method == 'POST':
+        f=EmpForm(request.POST,instance=emp)
+        f.save()
+        return redirect('/empList')
+    else:
+        f=EmpForm(instance=emp)
+        d={'form':f}
+        return render(request,'register.html',d)
+
+def editStd(request):
+    sid = request.GET.get('sid')
+    std = Student.objects.get(Rank=sid)
+    if request.method == 'POST':
+        f = StudentForm(request.POST,instance=std)
+        f.save()
+        return redirect('/studentList')
+    else:
+        f=StudentForm(instance=std)
+        d={'form':f}
+        return render(request,'register.html',d)
+
+def editAcc(request):
+    sid = request.GET.get('sid')
+    acc = Account.objects.get(id=sid)
+    if request.method == 'POST':
+        f = AccountForm(request.POST,instance=acc)
+        f.save()
+        return redirect('/accountList')
+    else:
+        f=AccountForm(instance=acc)
+        d={'form':f}
+        return render(request,'register.html',d)

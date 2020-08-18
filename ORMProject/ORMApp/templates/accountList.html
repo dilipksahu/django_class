@@ -25,6 +25,8 @@
             <td>{{i.Emp_Id.email}}</td>
             <td>{{i.Student_Rank.name}}</td>
             <td>{{i.Student_Rank.college}}</td>
+            <td><a href="deleteAcc?id={{i.id}}">Delete</a></td>
+            <td><a href="editAcc?sid={{i.id}}">Edit</a></td>
         </tr>
 
     {%endfor%}

@@ -1,5 +1,7 @@
 <h1>All Emp Details</h1>
 
+{% include 'menu.html' %}
+
 <table cellpading="10" cellspacing="10" border="1">
     <tr>
         <th>Id</th>
@@ -9,7 +11,7 @@
         <th>Cname</th>
         <th>Address</th>
         <th>Contact</th>
-        <th>Action</th>
+        <th colspan="2">Action</th>
 
     </tr>
 
@@ -23,6 +25,7 @@
             <td>{{i.myaddress}}</td>
             <td>{{i.contact}}</td>
             <td><a href="deleteEmp?id={{i.id}}">Delete</a></td>
+            <td><a href="editEmp?sid={{i.id}}">Edit</a></td>
 
         </tr>
 

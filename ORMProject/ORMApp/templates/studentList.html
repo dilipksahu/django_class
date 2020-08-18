@@ -6,6 +6,7 @@
         <th>Name</th>
         <th>Email</th>
         <th>College</th>
+        <th colspan="2">Action</th>
 
     </tr>
 
@@ -15,6 +16,8 @@
             <td>{{i.name}}</td>
             <td>{{i.email}}</td>
             <td>{{i.college}}</td>
+            <td><a href="deleteStd?Rank={{i.Rank}}">Delete</a></td>
+            <td><a href="editStd?sid={{i.Rank}}">Edit</a></td>
             
         </tr>
 

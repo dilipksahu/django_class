@@ -1,4 +1,9 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/myapp.css'%}">
 <h1>Registeration Form</h1>
+
+{% include 'menu.html' %}
 
 
 {{form.as_p}}
