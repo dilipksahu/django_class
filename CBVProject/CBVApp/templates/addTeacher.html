@@ -1,0 +1,13 @@
+<h2>Teacher Registration Form</h2>
+
+<form action="insertTeacher" method="POSt">
+    {%csrf_token%}
+    <table cellpading="10" cellspacing="10" border="6">
+        {{form.as_table}}
+        <tr>
+            <td><input type="submit" value="Save"></td>
+            <td><input type="reset" value="Reset"></td>
+        </tr>
+    </table>
+</form>
+<h3><a href="/">Home</a></h3>

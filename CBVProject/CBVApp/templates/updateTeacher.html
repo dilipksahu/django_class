@@ -1,0 +1,13 @@
+<h1>Update Form For Teacher</h1>
+
+<form method="POST">
+    {%csrf_token%}
+    <table cellpading="10" cellspacing="10" border="6">
+        {{form.as_table}}
+        <tr>
+            <td><input type="submit" value="Update"></td>
+            <td><input type="reset" value="Reset"></td>
+        </tr>
+    </table>
+
+</form>

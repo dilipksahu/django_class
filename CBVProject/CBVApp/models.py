@@ -11,6 +11,9 @@ class Teacher(models.Model):
 
     class Meta():
         db_table='Teacher'
+    
+    def __str__(s):
+        return s.name
 
 
 class TeacherForm(forms.ModelForm):
@@ -29,6 +32,9 @@ class Student(models.Model):
 
     class Meta():
         db_table='Student'
+
+    def __str__(s):
+        return s.name
 
 class StudentForm(forms.ModelForm):
     class Meta():
