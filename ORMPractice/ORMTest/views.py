@@ -83,3 +83,27 @@ def editEmp(request):
         f = EmpForm(instance=emp)
         d = {'form':f}
         return render(request,'registration.html',d)
+
+def editStd(request):
+    rno = request.GET.get('rno')
+    std = Student.objects.get(roll_no=rno)
+    if request.method == "POST":
+        f = StudentForm(request.POST,instance=std)
+        f.save()
+        return redirect("/stdList")
+    else:
+        f = StudentForm(instance=std)
+        d = {'form':f}
+        return render(request,"registration.html",d)
+
+def editAcc(request):
+    aid = request.GET.get('aid')
+    acc = Account.objects.get(id=aid)
+    if request.method == "POST":
+        f = AccountForm(request.POST,instance=acc)
+        f.save()
+        return redirect("/accList")
+    else:
+        f = AccountForm(instance=acc)
+        d = {'form':f}
+        return render(request,"registration.html",d)

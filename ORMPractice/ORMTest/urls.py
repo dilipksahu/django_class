@@ -15,5 +15,7 @@ urlpatterns = [
     path('deleteStd',v.deleteStd),
     path('deleteAcc',v.deleteAcc),
     path('editEmp',v.editEmp),
+    path('editStd',v.editStd),
+    path('editAcc',v.editAcc),
     
 ]
