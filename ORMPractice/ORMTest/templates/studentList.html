@@ -1,0 +1,23 @@
+<h1>All Students Details</h1>
+
+<table cellspacing='10' cellpadding='10' border='6'>
+    <tr>
+        <th>Roll No.</th>
+        <th>Name</th>
+        <th>Stream</th>
+        <th>College</th>
+        <th colspan="2">Action</th>
+    </tr>
+    {% for i in stdlist %}
+    <tr>
+        <td>{{i.roll_no}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.stream}}</td>
+        <td>{{i.college}}</td>
+        <td><a href="deleteStd?rno={{i.roll_no}}">Delete</a></td>
+        <td><a href="editStd"></a>Edit</td>
+
+    </tr>
+    {% endfor %}
+</table>
+<h3><a href="/">Home</a></h3>

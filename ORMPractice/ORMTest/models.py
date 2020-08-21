@@ -9,6 +9,7 @@ class Emp(models.Model):
     empaddress = models.CharField(max_length=200,default='')
     class Meta:
         db_table = "Emp"
+        
     def __str__(s):
         return s.name
     

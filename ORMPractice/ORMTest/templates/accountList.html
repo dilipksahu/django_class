@@ -1,0 +1,26 @@
+<h1>All Account Details</h1>
+
+<table cellspacing='10' cellpadding='10' border='6'>
+    <tr>
+        <th>ID</th>
+        <th>Salary</th>
+        <th>Month</th>
+        <th>Emp Name</th>
+        <th>Student Name</th>
+        <th colspan="2">Action</th>
+
+    </tr>
+
+    {% for i in acclist %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.salary}}</td>
+        <td>{{i.month}}</td>
+        <td>{{i.emp.name}}</td>
+        <td>{{i.std.name}}</td>
+        <td><a href="deleteAcc?aid={{i.id}}">Delete</a></td>
+        <td><a href="editAcc">Edit</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<h3><a href="/">Home</a></h3>
