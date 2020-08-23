@@ -1,0 +1,30 @@
+<h1>All Employee List and Details</h1>
+
+<table cellspacing='10' cellpadding='10' border="6">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Contact No.</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Company</th>
+        <th colspan="3">Action</th>
+    </tr>
+    {% for i in object_list %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.contact}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.cname}}</td>
+        <td><a href="deleteEmp/{{i.id}}">Delete-1</a></td>
+        <td><a href="sdeleteEmp/{{i.id}}">Delete-2</a></td>
+        <td><a href="editEmp/{{i.id}}">Edit</a></td>
+    </tr>
+    {% endfor %}
+
+</table>
+<h3><a href="/">Home</a></h3>
