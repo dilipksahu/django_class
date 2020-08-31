@@ -1,0 +1,15 @@
+    {% load static %}
+    <!--Core JavaScript file  -->
+    <script src="{% static 'js/jquery-1.10.2.js' %}"></script>
+    <!--bootstrap JavaScript file  -->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <!--Slider JavaScript file  -->
+    <script src="{% static 'ItemSlider/js/modernizr.custom.63321.js' %}"></script>
+    <script src="{% static 'ItemSlider/js/jquery.catslider.js' %}"></script>
+    <script>
+        $(function () {
+
+            $('#mi-slider').catslider();
+
+        });
+		</script>
