@@ -1,0 +1,22 @@
+{% extends 'base/layout.html' %}
+{% block bodyblock %}
+<div class="container">
+    <div class="col-9">
+        <h1>User Login</h1>
+        
+        <form  method="POST">
+            {% csrf_token %}
+                
+            
+                {{form.as_p}}
+
+            <input type="submit" value="Login" class="btn btn-primary">
+        </form>
+        {% if errmsg %}
+        <div class="alert alert-danger" role="alert">
+            {{ errmsg }}
+        </div>
+        {% endif %}
+    </div>
+</div>        
+{% endblock %}

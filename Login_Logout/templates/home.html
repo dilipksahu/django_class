@@ -1,0 +1,11 @@
+{% extends 'base/layout.html' %}
+
+{% block bodyblock %}
+
+<h1>Hello World....!</h1>
+{% if request.user.is_authenticated %}
+
+    <h3>Welcome! <span class="badge badge-secondary">{{request.user.first_name}}</span></h3>
+{% endif %}
+
+{% endblock %}
