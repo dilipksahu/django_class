@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-from . models import Income,Expense
+from .models import Income,Expense
 
 class UserForm(UserCreationForm):
     class Meta:
@@ -17,7 +17,3 @@ class ExpenseForm(forms.ModelForm):
     class Meta:
         model = Expense
         fields = "__all__"
-
-# class LoginForm(forms.Form):
-#     username = forms.CharField(label="",widget=forms.TextInput(attrs={'class':'form-control','placeholder':'User Name'}))
-#     pwd = forms.CharField(label="",min_length=8,widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Password'}))

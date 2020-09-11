@@ -1,7 +1,14 @@
+{% extends 'sideBar.html'%}
+{% block main %}
 <form method="POST">
     {% csrf_token %}
-    <table cellspacing='10' cellpadding='10' border="6">
-        {{form.as_table}}
+    <table align="center" cellspacing='10' cellpadding='10' border='6'>
+        {% if user.is_authenticated%}
+            {{form.as_table}}
+        {% endif %}
+        {% if 'expmsg' %}
+            {{expmsg}}
+        {% endif %}
         <tr>
             <td><input type="submit" value="Submit"></td>
             <td><input type="reset" value="Reset"></td>
@@ -9,3 +16,4 @@
     </table>
 
 </form>
+{% endblock %}

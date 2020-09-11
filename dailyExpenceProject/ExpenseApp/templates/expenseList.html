@@ -1,6 +1,9 @@
+{% extends 'sideBar.html'%}
+{% block main %}
+
 <h1>All Employees Expense Details</h1>
 
-<table cellspacing='10' cellpadding='10' border='6'>
+<table align="center" cellspacing='10' cellpadding='10' border='6'>
     <tr>
         <th>ID</th>
         <th>Expense</th>
@@ -24,4 +27,6 @@
     {% endfor %}
 
 </table>
-<h3><a href="/">Home</a></h3>
+
+
+{% endblock %}

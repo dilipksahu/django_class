@@ -1,0 +1,25 @@
+{% extends 'sideBar.html'%}
+{% block main %}
+
+
+{% if msglogin is not None %} {{mslogin}} {%endif%}
+<form method="POST">
+    {% csrf_token%}
+    <table align="center" cellspacing='10' cellpadding='10' border='6'>
+        <tr>
+            <td>UserName</td>
+            <td><input type="text" name="uname" required></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="passw" required></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="Login"></td>
+        </tr>
+
+    </table>
+</form>
+
+{% endblock %}

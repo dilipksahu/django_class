@@ -1,11 +1,12 @@
-<h1>Welcome Daily Expense Application</h1>
+{% extends 'sideBar.html'%}
+{% block main %}
 
-<h2><a href="">Home</a></h2>
-<h2><a href="addUser">Register</a></h2>
-<h2><a href="addIncome">AddIncome</a></h2>
-<h2><a href="incomeList">IncomeList</a></h2>
-<h2><a href="addExpense">AddExpense</a></h2>
-<h2><a href="expenseList">ExpenseList</a></h2>
-<h2><a href="">Login</a></h2>
-<h2><a href="">LogOut</a></h2>
-<h2><a href="">EditProfile</a></h2>
+
+<h1> Daily Expense Web Application</h1>
+{% if user.is_authenticated%}
+<h2 style="color:Red">Welcome!{{user}}</h2>
+<h2 style="color:yellow">Welcome!{{uname}}</h2>
+<h3 style="color: red;"> Your Balance is : {{bal}}</h3>
+{% endif %}
+
+{% endblock %}
