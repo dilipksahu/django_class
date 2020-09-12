@@ -23,3 +23,7 @@ class RegisterForm(forms.Form):
         if User.objects.filter(username__iexact=un).exists():
             raise ValidationError("User already exist")
         return un
+
+class LoginForm(forms.Form):
+    username =  forms.CharField(label="",widget=forms.TextInput(attrs={'class':'form-control','placeholder':"Username"}))
+    pwd = forms.CharField(label="",min_length=8,widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Password'}))

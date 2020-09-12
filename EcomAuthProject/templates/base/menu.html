@@ -9,7 +9,7 @@
         <li class="nav-item active">
           <a class="nav-link" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a>
         </li>
-        <!-- {% if request.user.is_authenticated %} -->
+        {% if request.user.is_authenticated %}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Hi {{request.user.first_name}}
@@ -18,17 +18,17 @@
               <a class="dropdown-item" href="#">Action</a>
               <a class="dropdown-item" href="#">Another action</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="">Sign-out</a>
+              <a class="dropdown-item" href="{% url 'logout' %}">Sign-out</a>
             </div>
           </li>
-        <!-- {% else %} -->
+        {% else %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'register' %}">Register</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Sign-in</a>
+            <a class="nav-link" href="{% url 'login' %}">Sign-in</a>
           </li>
-        <!-- {% endif %} -->
+        {% endif %}
         
       </ul>
       <form class="form-inline my-2 my-lg-0">

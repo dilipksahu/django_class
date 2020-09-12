@@ -1,6 +1,10 @@
 {% extends 'base/layout.html' %}
 
 {% block bodyblock %}
-<h1>Welcome! To User Auth App</h1>
+{% if request.user.is_authenticated %}
+    <h1>Welcome!{{user.first_name}} To User Auth App</h1>
+{% else %}
+    <h1>User Authentication Application</h1>
+{% endif %}
 
 {% endblock %}
