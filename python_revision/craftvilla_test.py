@@ -39,19 +39,17 @@ print(findMax(days))
 # both dicts. If key is common then the value of key in resultant dict
 # must be the sum of value in a and b
 
-a = {'x':1,'y':2,'z':3}
-b = {'a':4,'b':5,'b':6,'z':5}
+a = {'x':1,'y':2,'z':8}
+b = {'a':4,'b':5,'x':6,'z':5}
 
 def dictMerge(a,b):
-        mer = {}
-        for i in b:
-                if i in a:
-                        a[i] = a[i] + b[i]
-                else:
-                        a.update(b)
-        return a
-
-print(dictMerge(a,b))
+    for i in b:
+        if i in a:
+            b[i] = b[i] + a[i]
+    # merge and replace a with b
+    c = {**a,**b}
+    print(c)
+dictMerge(a,b)
         
 
 #4. Item with highest value count

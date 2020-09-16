@@ -1,4 +1,4 @@
-"""dailyExpenceProject URL Configuration
+"""onlinesshoping URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -18,17 +18,8 @@ from django.urls import path
 from . import views as v
 
 urlpatterns = [
-    path('',v.home),
-    path('addUser',v.addUser),
-    path('addIncome',v.addIncome),
-    path('addExpense',v.addExpense),
-    path('incomeList',v.getIncomeList),
-    path('expenseList',v.getExpenseList),
-    path('deleteIncome',v.deleteIncome),
-    path('deleteExpense',v.deleteExpense),
-    path('editIncome',v.editIncome),
-    path('editExpense',v.editExpense),
-    path('login/',v.login_view),
-    path('logout',v.logout_view),
-    path('editProfile',v.editProfile),
+    # path('',v.home),
+    # path('category',v.getByCategory,name='getByCategory'),
+    path('register',v.addUser,name='addUser'),
+    path('login',v.login_view,name='login_view'),
 ]

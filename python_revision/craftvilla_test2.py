@@ -1,7 +1,7 @@
 
 # Q 1. Find out the maximum number from the list without using any built-in methods
 
-l = [2,5,8,6,1]
+l = [2,5,8,6,1,7]
 
 def largestElement(l):
     set(l)
@@ -27,6 +27,25 @@ def secondLargest(l):
 
 secondLargest(l)
 
+*********************** Method- 2 ****************************
+l = [2,5,8,6,1,7]
+
+def sec_lar(a):
+    if a[0] > a[1]:
+        l1,l2 = a[0],a[1]
+    else:
+        l1,l2 = a[1],a[0]
+    print(len(a))
+
+    for i in range(2,len(a)):
+        if a[i] > l1:
+            l2 = l1
+            l1 = a[i]
+        elif a[i] > l2:
+            l2 = a[i]
+    print(l2)
+     
+sec_lar(l)
 
 # Q 3.Find out the key whose value is a second maximum number
 
