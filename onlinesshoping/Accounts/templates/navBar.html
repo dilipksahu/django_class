@@ -11,7 +11,9 @@
               <span class="sr-only">(current)</span>
             </a>
                 </li>
+
                 {% if user.is_authenticated%}
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">Cart-List</a>
                 </li>
@@ -22,7 +24,11 @@
                     <a class="nav-link" href="#">Feedback</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
+                    <a class="nav-link" href="#">MyOder</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Accounts:logout_view' %}">Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
@@ -32,16 +38,17 @@
                     <a class="nav-link" href="{% url 'Accounts:login_view' %}">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Search</a>
+                    <a class="nav-link" href="#">About</a>
                 </li>
+
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Produts</a>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
+                    <a class="nav-link" href="#">Contact</a>
                 </li>
                 {% endif %}
-
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Search</a>
+                </li>
 
 
             </ul>

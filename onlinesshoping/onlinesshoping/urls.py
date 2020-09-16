@@ -19,6 +19,6 @@ from Accounts import views as v
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',v.index),
-    path("Acc",include(("Accounts.urls",'Accounts'),namespace='Accounts')),
+    path("Acc",include(("Accounts.urls",'Accounts'),namespace='Accounts')),   # Acc- Appname, namespace - mapping
 
 ]

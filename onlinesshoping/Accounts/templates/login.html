@@ -1,14 +1,18 @@
 {% extends 'base.html' %} {% block Main %}
 <form method="POST">
-    {% csrf_token %}
-    <table>
+    {% csrf_token %} {% if msglogin %}
+    <div class="alert alert-danger" role="alert">
+        {{ msglogin }}
+    </div>
+    {% endif %}
+    <table cellpadding="8" cellspacing="8" border="3">
         <tr>
             <td>Username</td>
             <td><input type="text" name="uname" id=""></td>
         </tr>
         <tr>
             <td>Password</td>
-            <td><input type="password" name="pwd" id=""></td>
+            <td><input type="password" name="passw" id=""></td>
         </tr>
         <tr>
             <td><input type="submit" value="Submit"></td>
@@ -16,8 +20,4 @@
         </tr>
     </table>
 </form>
-{% if msglogin %}
-<div class="alert alert-danger" role="alert">
-    {{ msglogin }}
-</div>
-{% endif %} {% endblock %}
+{% endblock %}
