@@ -36,6 +36,7 @@ def login_view(request):
         passw = request.POST.get("passw")
         usr=authenticate(request,username=uname,password=passw)
         if usr is not None:
+            request.session['userId'] = usr.id
             login(request,usr)
             return redirect('/')
         else:
@@ -62,3 +63,16 @@ def search(request):
         pl=Product.objects.all() 
         d={'cl':cl,'pl':pl}
         return render(request,'search.html',d)
+
+def edit_profile(request):
+    uId = request.session.get('userId')
+    user = User.objects.get(id=uId)
+    cl=Category.objects.all()
+    if request.method == "POST":
+        f=UserForm(request.POST,instance=user)
+        f.save()
+        return redirect("/")
+    else:
+        f=UserForm(instance=user)
+        d={'cl':cl,'form':f}
+        return render(request,'forms.html',d)

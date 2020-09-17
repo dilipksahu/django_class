@@ -22,6 +22,7 @@ urlpatterns = [
     path('register',v.addUser,name='addUser'),
     path('login',v.login_view,name='login_view'),
     path('logout',v.logout_view,name='logout_view'),
-    path('searchproduct',v.search,name='search')
+    path('searchproduct',v.search,name='search'),
+    path('editprofile',v.edit_profile,name='edit_profile'),
 
 ]

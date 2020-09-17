@@ -11,7 +11,7 @@
             {% if user.is_authenticated %}
             <button><h5><a href="/">AddToCart</a></h5></button> {% else %}
             <button><h5><a href="{% url 'Accounts:login_view' %}">AddToCart</a></h5></button> {% endif %}
-            <p class="card-text">{{i.description}}</p>
+            <p class="card-text">{{i.description | truncatewords:10}}</p>
 
         </div>
         <div class="card-footer">
