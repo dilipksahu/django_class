@@ -3,7 +3,7 @@
     <h1 class="my-4">Shop Name</h1>
     <div class="list-group">
         {% for i in cl %}
-        <a href="{% url 'Accounts:getByCategory' %}" class="list-group-item">{{i.cname}}</a> {% endfor %}
+        <a href="{% url 'Accounts:getByCategory' i.id %}" class="list-group-item">{{i.cname}}</a> {% endfor %}
     </div>
 
 </div>

@@ -9,8 +9,12 @@ def index(request):
     d = {'cl':cl,'pl':pl}
     return render(request,'index.html',d)
 
-def getByCategory(request):
-    return HttpResponse("<h1>Success</h1>")
+def getByCategory(request,id):
+    pl=Product.objects.filter(category=id)
+    cl=Category.objects.all()
+    d={'cl':cl,'pl':pl}
+    return render(request,'index.html',d)
+
 
 def addUser(request):
     if request.method=='POST':
@@ -45,3 +49,16 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect("/")
+
+def search(request):
+    cl=Category.objects.all()
+
+    if request.method=='POST':
+        pname=request.POST.get('shr')
+        pl=Product.objects.filter(pname__icontains=pname)  
+        d={'cl':cl,'pl':pl}
+        return render(request,'search.html',d)
+    else:
+        pl=Product.objects.all() 
+        d={'cl':cl,'pl':pl}
+        return render(request,'search.html',d)

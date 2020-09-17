@@ -18,8 +18,10 @@ from django.urls import path
 from . import views as v
 
 urlpatterns = [
-    path('category',v.getByCategory,name='getByCategory'),
+    path('category/<int:id>/',v.getByCategory,name='getByCategory'),
     path('register',v.addUser,name='addUser'),
     path('login',v.login_view,name='login_view'),
     path('logout',v.logout_view,name='logout_view'),
+    path('searchproduct',v.search,name='search')
+
 ]

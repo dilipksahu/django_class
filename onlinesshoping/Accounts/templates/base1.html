@@ -6,11 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content=""> {% if user.is_authenticated %}
-    <title>Shop Homepage - {{user.username}}</title>
-    {% else %}
-    <title>Shop Homepage - {{user.username}}</title>
-    {% endif %}
+    <meta name="author" content="">
+
+    <title>Shop Homepage - Start Bootstrap Template</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{%static 'css/bmin.css' %}" rel="stylesheet">
@@ -35,12 +33,12 @@
 
             <div class="col-lg-9">
                 <!-- Slider Menu -->
-                {% include 'slider.html' %}
+                {% block GetData %} {% endblock %}
 
                 <div class="row">
 
                     <!-- Main Body -->
-                    {% block Main %} {% endblock %}
+                    {% include 'home.html' %}
                 </div>
                 <!-- /.row -->
 
