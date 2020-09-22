@@ -13,6 +13,9 @@ class Product(models.Model):
     description = models.CharField(max_length=300)
     category = models.ForeignKey(Category,on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.pname
+
 
 class Cart(models.Model):
     Product = models.ForeignKey(Product,on_delete=models.CASCADE)

@@ -9,7 +9,7 @@
             </h4>
             <h5>Rs.{{i.price}}</h5>
             {% if user.is_authenticated %}
-            <button><h5><a href="/">AddToCart</a></h5></button> {% else %}
+            <button><h5><a href="{% url 'Accounts:addToCart' i.id %}">AddToCart</a></h5></button> {% else %}
             <button><h5><a href="{% url 'Accounts:login_view' %}">AddToCart</a></h5></button> {% endif %}
             <p class="card-text">{{i.description | truncatewords:10}}</p>
 

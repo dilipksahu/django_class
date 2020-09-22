@@ -36,7 +36,7 @@ def login_view(request):
         passw = request.POST.get("passw")
         usr=authenticate(request,username=uname,password=passw)
         if usr is not None:
-            request.session['userId'] = usr.id
+            request.session['uId'] = usr.id
             login(request,usr)
             return redirect('/')
         else:
@@ -76,3 +76,22 @@ def edit_profile(request):
         f=UserForm(instance=user)
         d={'cl':cl,'form':f}
         return render(request,'forms.html',d)
+
+def addToCart(request,id):
+    cart=Cart()
+    pd=Product.objects.get(id=id)
+    print('------->',pd)
+    cart.Product=pd
+    uid=request.session.get('uId')
+    usr=User.objects.get(id=uid)
+    print('------------> ',usr)
+    cart.user=usr
+    cart.save()
+    return redirect('/')
+
+def getCartList(request):
+    # uid=request.session.get('uId')
+    clist = Cart.objects.all()
+    cl=Category.objects.all() 
+    d={'clist':clist,'cl':cl}
+    return render(request,'cartList.html',d)
