@@ -19,6 +19,6 @@ from RestApp import views as v
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',v.home),
-    path('rest',include(('RestApp.urls','RestApp'),namespace='RestApp')),
+    path('',include('RestApp.urls')),
+    path('',include('rest_framework.urls')),
 ]
