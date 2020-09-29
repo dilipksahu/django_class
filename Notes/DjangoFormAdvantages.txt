@@ -1,0 +1,21 @@
+
+=>What are the advantages of Django Form over HTML form?
+
+1) One major advantage that Django's form class gives is validation. This is the biggest advantage of Django's form class. 
+   It was built with validation being the key.
+
+2) Django's form class provides validation on many forms. For example, if you create a form and there are many blank fields 
+   (by default all fields are required meaning a user must enter in a value), the form will be submitted; the user will be told 
+   to fill in the blank fields before the form is submitted.
+
+3) Django's form class also provides validation with many different types of data entry. For example, 
+   it has an EmailField that validates email address. So, if a user types in, 'Peter' as his email, 
+   Django's form states that this is not a valid email address.
+
+4) So validation is the corner of Django's form class. It is an excellent validating tool to make sure 
+   that all fields of the form are filled and appropriate for what is being asked.
+
+5) Another advantage of Django forms is gives ease of use when putting the data taken from a form to a database table.
+   You can use the same variable that makes the form fields and insert the values from them into a database table.
+   It provides ease of use when taking data from a form and inserting the data into a database. 
+   If you are doing this, Django's form are very suitable and makes this process simpler.

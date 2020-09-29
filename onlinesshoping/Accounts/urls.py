@@ -26,5 +26,7 @@ urlpatterns = [
     path('editprofile',v.edit_profile,name='edit_profile'),
     path('addToCart/<int:id>/',v.addToCart,name='addToCart'),
     path('cartlist',v.getCartList,name='cartlist'),
+    path('deletecart/<int:id>/',v.deleteCart,name='deleteCart'),
+    path('orderlist/<int:id>/',v.getOrderList,name='myorder'),
 
 ]

@@ -1,0 +1,48 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<form method="post" action="./">
+ 		Shoes 1: <input type="number" name="shoes1" class="qty1"><br>
+	    Shoes 2: <input type="number" name="shoes2" class="price1"><br>
+	   
+	    Sub total: <input type="number" name="subTotal1" class="subTotal1 subTotal"><br>
+	    <br>
+	    Sandals 1: <input type="number" name="sandals1" class="qty2"><br>
+	    Sandals 2: <input type="number" name="sandals2" class="qty2"><br>
+	    Sandals 3: <input type="number" name="sandals3" class="qty2"><br>
+	    Sub total: <input type="number" name="subTotal2" class="subTotal2 subTotal"><br>
+	    <br>
+	    Total: <input type="number" name="total" class="total"><br>
+	    <br>
+	    Mean (50% Shoes + 50% Sandals ) / 2: <input type="number" name="mean" class="mean">
+	    <br>
+		<input type="submit" value="Submit">
+ 	</form>
+
+<script>	
+$(document).on("change", ".qty1", function() {
+	    var sum = 0;
+	    $(".qty1",".price1").each(function(){
+	        sum += $("shoes1").val() *$("shoes2").val();
+	    });
+	    $(".subTotal1").val(sum);
+            calcTotal();
+	});
+	$(document).on("change", ".qty2", function() {
+	    var sum = 0;
+	    $(".qty2").each(function(){
+	        sum += +$(this).val();
+	    });
+	    $(".subTotal2").val(sum);
+            calcTotal();
+	});
+	// Does work
+	function calcTotal() {
+	    var sum = 0;
+	    $(".subTotal").each(function(){
+	        sum += +$(this).val();
+	    });
+	    $(".total").val(sum);
+            $(".mean").val(sum/2);
+	};
+	
+
+</script>

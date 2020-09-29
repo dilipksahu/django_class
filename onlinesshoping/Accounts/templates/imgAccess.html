@@ -1,0 +1,16 @@
+<form method="POST" enctype="multipart/form-data">
+    {%csrf_token%}
+
+    <table>
+        {{form.as_table}}
+        <tr>
+            <td><input type="submit" value="Save"></td>
+        </tr>
+
+    </table>
+</form>
+<br>
+<br> {%for i in imglist%}
+
+<h3>{{i.imgname}}</h3>
+<img src="{{i.img}}"> {%endfor%}

@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect,HttpResponse
-from .models import Category,Product,Cart,User
+from .models import Category,Product,Cart,User,PlaceOrder
 from .forms import UserForm
 from django.contrib.auth import authenticate,login,logout
 
@@ -90,8 +90,53 @@ def addToCart(request,id):
     return redirect('/')
 
 def getCartList(request):
-    # uid=request.session.get('uId')
-    clist = Cart.objects.all()
-    cl=Category.objects.all() 
-    d={'clist':clist,'cl':cl}
-    return render(request,'cartList.html',d)
+    uid=request.session.get('uId')
+    if request.method=='POST':
+        odr=PlaceOrder()
+        totalBill=request.POST.get('totalBill')
+        print('--------------> ',totalBill)
+        usr=User.objects.get(id=uid)
+        odr.totalBill=totalBill
+        odr.user=usr
+        if odr is not None:
+            odr.save()
+            clist=Cart.objects.filter(user_id=uid)
+            for i in clist:
+                i.delete()
+            return redirect('/')
+        else:
+            return HttpResponse("Error in CART List Delete Operations")
+    else:
+        clist=Cart.objects.filter(user_id=uid)
+        cl=Category.objects.all()
+        totalBill=0
+        for i in clist:
+            totalBill=totalBill+i.Product.price
+        d={'cl':cl,'clist':clist,'totalBill':totalBill}
+        return render(request,'cartList.html',d)
+
+def deleteCart(request,id):
+    cid = Cart.objects.get(id=id)
+    cid.delete()
+    return redirect('/Acccartlist')
+
+def getOrderList(request,id):
+    ol=PlaceOrder.objects.filter(user_id=id)
+    cl=Category.objects.all()
+    d={'ol':ol,'cl':cl}
+    return render(request,'orderList.html',d)
+
+# its only Image Practice
+from .models import ImageData,ImageForm
+def imgaccess(request):
+    f=ImageForm
+    if request.method=='POST':
+        imgf=ImageForm(request.POST,request.FILES)
+        imgf.save()
+        imgList=ImageData.objects.all()
+        d={'form':f,'imglist':imgList}
+        return render(request,'imgAccess.html',d)
+    else:
+        imgList=ImageData.objects.all()
+        d={'form':f,'imglist':imgList}
+        return render(request,'imgAccess.html',d)
