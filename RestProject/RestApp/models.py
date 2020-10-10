@@ -16,3 +16,18 @@ class Account(models.Model):
     emp=models.ForeignKey(Emp,on_delete=models.CASCADE)
 
 # ****************************************************************************
+
+class Singer(models.Model):
+    name=models.CharField(max_length=30)
+    age=models.IntegerField()
+    owner = models.ForeignKey('auth.User', related_name='singer', on_delete=models.CASCADE)
+
+    def __str__(s):
+        return s.name
+
+
+class Songs(models.Model):
+    name=models.CharField(max_length=30)
+    duration=models.IntegerField()
+    singer=models.ManyToManyField(Singer)
+    owner = models.ForeignKey('auth.User', related_name='songs', on_delete=models.CASCADE)

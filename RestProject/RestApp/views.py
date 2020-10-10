@@ -54,12 +54,33 @@ class CreateAccount(generics.CreateAPIView):
 
 # Display Data
 class AccountListView(generics.ListAPIView):
-    queryset=Account.objects.all()
+    queryset = Account.objects.all()
     serializer_class=AccountSerializer
 
 class CreateAccountListView(generics.ListCreateAPIView):
-    queryset=Account.objects.all()
+    queryset = Account.objects.all()
     serializer_class=AccountSerializer
 
+# ModelViewSet - All CRUD operation
+from rest_framework import viewsets
+from .models import Singer,Songs
+from .serializer import UserSerializer,SingerSerializer,SongsSerializer
+from django.contrib.auth.models import User
+
+class EmpViewSet(viewsets.ModelViewSet):
+    queryset=Emp.objects.all()
+    serializer_class=EmpSerializer
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset=User.objects.all()
+    serializer_class=UserSerializer
+
+class SingerViewSet(viewsets.ModelViewSet):
+    queryset=Singer.objects.all()
+    serializer_class=SingerSerializer
+
+class SongsViewSet(viewsets.ModelViewSet):
+    queryset=Songs.objects.all()
+    serializer_class=SongsSerializer
 
 
