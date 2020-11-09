@@ -27,7 +27,7 @@ def secondLargest(l):
 
 secondLargest(l)
 
-*********************** Method- 2 ****************************
+#*********************** Method- 2 ****************************
 l = [2,5,8,6,1,7]
 
 def sec_lar(a):
@@ -56,6 +56,7 @@ def secondMaxKey(d):
     for ele in d:
         for key,value in ele.items():
             mydict[key] = value
+    print(mydict)
     maxx1 = max(mydict.values())
     maxx2 = 0
     for k,v in mydict.items():
