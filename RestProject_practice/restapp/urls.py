@@ -18,4 +18,5 @@ urlpatterns = [
     path('addAcc/',v.CreateAcc.as_view()),
     path('accList/',v.AccListView.as_view()),
     path('alAcc/',v.CreateAccListView.as_view()),
+    path('rudAcc/<int:pk>/',v.RUDAcc.as_view()),
 ]

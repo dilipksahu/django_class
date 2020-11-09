@@ -15,4 +15,22 @@ class Account(models.Model):
     year = models.IntegerField()
     emp = models.ForeignKey(Emp,on_delete=models.CASCADE)
 
-    
+#------------------- Relationship Models -----------------------
+
+class Singer(models.Model):
+    name = models.CharField(max_length=30)  
+    age = models.IntegerField()
+    created_user = models.ForeignKey('auth.User',related_name='singer',on_delete=models.CASCADE)
+
+    def __str__(s):
+        return s.name
+
+class Songs(models.Model):
+    title = models.CharField(max_length=30)
+    duration = models.IntegerField()
+    singer = models.ManyToManyField(Singer)
+    created_user = models.ForeignKey('auth.User',related_name='songs',on_delete=models.CASCADE)
+
+    def __str__(s):
+        return s.title
+

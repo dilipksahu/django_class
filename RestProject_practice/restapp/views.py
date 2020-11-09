@@ -67,3 +67,35 @@ class AccListView(generics.ListAPIView):
 class CreateAccListView(generics.ListCreateAPIView):
     queryset = Account.objects.all()
     serializer_class = AccountSerializer
+
+# Display,Update and Delete Account Data
+class RUDAcc(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Account.objects.all()
+    serializer_class = AccountSerializer
+
+
+#------------------ Viewsets and Routers -------------------
+
+from rest_framework import viewsets
+
+# ModelViewSet : Perform Insert,Display,Update and Delete operation
+class EmpViewSet(viewsets.ModelViewSet):
+    queryset = Emp.objects.all()
+    serializer_class = EmpSerializer
+
+# ---------------- Relational Models Views ------------------
+from .models import Singer,Songs
+from django.contrib.auth.models import User
+from .serializer import UserSerializer,SingerSerializer,SongsSerializer
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+class SingerViewSet(viewsets.ModelViewSet):
+    queryset = Singer.objects.all()
+    serializer_class = SingerSerializer
+
+class SongsViewSet(viewsets.ModelViewSet):
+    queryset = Songs.objects.all()
+    serializer_class = SongsSerializer
